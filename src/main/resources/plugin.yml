@@ -1,0 +1,8 @@
+name: nyt-plugin-template
+version: '1.0.0'
+main: com.zeeyeh.nyt.NytPluginTemplate
+api-version: '1.21'
+load: STARTUP
+authors: [ LeonKeiran ]
+description: Minecraft nytheris server plugin development template
+website: https://zeeyeh.com
