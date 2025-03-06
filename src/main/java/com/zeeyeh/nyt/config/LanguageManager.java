@@ -145,7 +145,20 @@ public class LanguageManager {
     public String translate(String path) {
         Preconditions.checkArgument(!this.langConfigs.containsKey(getCurrentLanguage()), new RuntimeException("语言文件加载失败"));
         Configuration currentConfiguration = this.langConfigs.get(getCurrentLanguage());
-        return currentConfiguration.getString(path);
+        return parseLanguageParams(currentConfiguration.getString(path), new String[0]);
+    }
+
+    /**
+     * 根据给定的路径在当前语言配置中获取字符串
+     *
+     * @param path 配置路径
+     * @param params   参数数组
+     * @return 对应路径的字符串
+     */
+    public String translate(String path, String... params) {
+        Preconditions.checkArgument(!this.langConfigs.containsKey(getCurrentLanguage()), new RuntimeException("语言文件加载失败"));
+        Configuration currentConfiguration = this.langConfigs.get(getCurrentLanguage());
+        return parseLanguageParams(currentConfiguration.getString(path), params);
     }
 
     /**
