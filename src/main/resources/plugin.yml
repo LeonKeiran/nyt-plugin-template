@@ -6,3 +6,7 @@ load: STARTUP
 authors: [ LeonKeiran ]
 description: Minecraft nytheris server plugin development template
 website: https://zeeyeh.com
+commands:
+  test:
+    aliases: []
+    usage: ''
